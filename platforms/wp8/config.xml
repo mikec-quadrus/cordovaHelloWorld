@@ -21,4 +21,7 @@
     <feature name="Camera">
         <param name="wp-package" value="Camera" />
     </feature>
+    <feature name="Vibration">
+        <param name="wp-package" value="Vibration" />
+    </feature>
 </widget>
