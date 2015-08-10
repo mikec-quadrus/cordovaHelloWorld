@@ -28,8 +28,6 @@ quadrusTest.deviceStatusCtrl = function($scope)
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
-        
-        setTimeout(function() { parentElement.setAttribute('style', 'display:none'); }, 3000);
     };
 
     bindEvents();
