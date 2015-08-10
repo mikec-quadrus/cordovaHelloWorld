@@ -1,6 +1,7 @@
 var angapp = angular.module('testApp', ['ngRoute']);
 
 angapp.controller('deviceStatusCtrl', quadrusTest.deviceStatusCtrl);
+angapp.controller('testDeviceCtrl', quadrusTest.testDeviceCtrl);
 
 angapp.controller('mainCtrl', function($scope, $route, $routeParams, $location) {
 	$scope.$route = $route;
@@ -8,14 +9,18 @@ angapp.controller('mainCtrl', function($scope, $route, $routeParams, $location) 
 	$scope.$location = $location;
 });
 
-angapp.config(function($routeProvider, $locationProvider) {
-	$routeProvider.when('/TestDevice', {
+angapp.config(['$routeProvider', function($routeProvider) {
+	$routeProvider
+	.when('/TestDevice', {
 		templateUrl: 'www/testDevice.html',
 		controller: 'testDeviceCtrl'
-	});
-	$routeProvider.otherwise({
+	})
+	.when('/DeviceStatus', {
 		templateUrl: 'www/deviceStatus.html',
 		controller: 'deviceStatusCtrl'
+	})
+	.otherwise({
+		redirectTo: '/DeviceStatus'
 	});
-});
+}]);
 
