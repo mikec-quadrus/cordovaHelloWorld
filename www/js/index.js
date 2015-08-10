@@ -1,7 +1,9 @@
 var angapp = angular.module('testApp', ['ngRoute']);
 
 angapp.controller('deviceStatusCtrl', quadrusTest.deviceStatusCtrl);
-angapp.controller('testDeviceCtrl', quadrusTest.testDeviceCtrl);
+angapp.controller('capturePhotoCtrl', quadrusTest.capturePhotoCtrl);
+angapp.controller('trackAccelerationCtrl', quadrusTest.trackAccelerationCtrl);
+angapp.controller('geolocationCtrl', quadrusTest.geolocationCtrl);
 
 angapp.controller('mainCtrl', function($scope, $route, $routeParams, $location) {
 	$scope.$route = $route;
@@ -11,12 +13,20 @@ angapp.controller('mainCtrl', function($scope, $route, $routeParams, $location) 
 
 angapp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
-	.when('/TestDevice', {
-		templateUrl: 'www/testDevice.html',
-		controller: 'testDeviceCtrl'
+	.when('/TrackAcceleration', {
+		templateUrl: 'trackAcceleration.html',
+		controller: 'trackAccelerationCtrl'
+	})
+	.when('/CapturePhoto', {
+		templateUrl: 'capturePhoto.html',
+		controller: 'capturePhotoCtrl'
+	})
+	.when('/Geolocate', {
+		templateUrl: 'geolocation.html',
+		controller: 'geolocationCtrl'
 	})
 	.when('/DeviceStatus', {
-		templateUrl: 'www/deviceStatus.html',
+		templateUrl: 'deviceStatus.html',
 		controller: 'deviceStatusCtrl'
 	})
 	.otherwise({

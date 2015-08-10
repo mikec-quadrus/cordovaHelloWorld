@@ -4,10 +4,56 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"wp-package\" value=\"Accelerometer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"wp-package\" value=\"Camera\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_SENSORS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_ISV_CAMERA\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_MEDIALIB_PHOTO\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_LOCATION\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "{71a717a0-3d42-11e5-8a3c-3b9dbbdea865}"
+        },
+        "org.apache.cordova.device-motion": {
+            "PACKAGE_NAME": "{71a717a0-3d42-11e5-8a3c-3b9dbbdea865}"
+        },
+        "org.apache.cordova.camera": {
+            "PACKAGE_NAME": "{71a717a0-3d42-11e5-8a3c-3b9dbbdea865}"
+        },
+        "org.apache.cordova.geolocation": {
             "PACKAGE_NAME": "{71a717a0-3d42-11e5-8a3c-3b9dbbdea865}"
         }
     },

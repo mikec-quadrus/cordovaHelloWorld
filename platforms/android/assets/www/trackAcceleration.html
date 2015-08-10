@@ -1,0 +1,14 @@
+<div ng-controller="trackAccelerationCtrl">
+    <button ng-click="trackAcceleration()" ng-disabled="watchId != 0">Track Acceleration</button> <br>
+    
+    <span>Watch Id = {{ watchId }}</span>
+    
+    <dl>
+        <dt>x</dt>
+        <dd>{{ previousReading.x }}</dd>
+        <dt>y</dt>
+        <dd>{{ previousReading.y }}</dd>
+        <dt>z</dt>
+        <dd>{{ previousReading.z }}</dd>
+    </dl>
+</div>

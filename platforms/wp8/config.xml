@@ -15,4 +15,10 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <feature name="Accelerometer">
+        <param name="wp-package" value="Accelerometer" />
+    </feature>
+    <feature name="Camera">
+        <param name="wp-package" value="Camera" />
+    </feature>
 </widget>
