@@ -21,4 +21,5 @@ angapp.config(function($routeProvider, $locationProvider) {
 		templateUrl: 'www/deviceStatusTemp.html',
 		controller: 'deviceStatusCtrl'
 	});
-}
+});
+
