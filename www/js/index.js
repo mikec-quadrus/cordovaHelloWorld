@@ -6,8 +6,6 @@ angapp.controller('mainCtrl', function($scope, $route, $routeParams, $location) 
 	$scope.$route = $route;
 	$scope.$routeParams = $routeParams;
 	$scope.$location = $location;
-	
-	$route.
 });
 
 angapp.config(function($routeProvider, $locationProvider) {
