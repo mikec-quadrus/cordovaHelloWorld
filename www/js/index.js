@@ -13,12 +13,8 @@ angapp.config(function($routeProvider, $locationProvider) {
 		templateUrl: 'www/testDevice.html',
 		controller: 'testDeviceCtrl'
 	});
-	$routeProvider.when('/DeviceStatus', {
-		templateUrl: 'www/deviceStatus.html',
-		controller: 'deviceStatusCtrl'
-	});
 	$routeProvider.otherwise({
-		templateUrl: 'www/deviceStatusTemp.html',
+		templateUrl: 'www/deviceStatus.html',
 		controller: 'deviceStatusCtrl'
 	});
 });
